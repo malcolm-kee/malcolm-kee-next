@@ -2,7 +2,7 @@ name: Build Site and Deploy
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -45,7 +45,7 @@ jobs:
           publish-dir: './out_publish'
           functions-dir: './out_functions'
           netlify-config-path: ./netlify.toml
-          production-branch: master
+          production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy from GitHub Actions'
         env:
