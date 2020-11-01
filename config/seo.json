@@ -1,0 +1,15 @@
+{
+    "title": "Malcolm Kee",
+    "titleTemplate": "%s | Malcolm Kee",
+    "description": "Malcolm Kee's personal website",
+    "openGraph": {
+        "type": "website",
+        "locale": "en_IE",
+        "url": "https://malcolmkee.com",
+        "site_name": "Malcolm Kee"
+    },
+    "twitter": {
+        "handle": "@Malcolm_Kee",
+        "cardType": "summary_large_image"
+    }
+}

@@ -59,11 +59,15 @@
   },
   "include": [
     "next-env.d.ts",
+    "type.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out_publish",
+    "out_functions"
   ]
 }

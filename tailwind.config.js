@@ -1,4 +1,4 @@
-const { colors, fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: [
@@ -14,36 +14,28 @@ module.exports = {
     './workshops/**/*.mdx',
   ],
   theme: {
-    minWidth: {
-      0: '0',
-      sm: '4rem',
-      md: '8rem',
-      lg: '16rem',
-      full: '100%',
-    },
     screens: {
-      xs: '450px',
+      xs: '400px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
     },
-    colors: {
-      primary: colors.teal,
-      black: colors.black,
-      white: colors.white,
-      red: colors.red,
-      green: colors.green,
-      blue: colors.blue,
-      gray: colors.gray,
-    },
     extend: {
+      colors: {
+        primary: defaultTheme.colors.teal,
+      },
       fontFamily: {
-        sans: ['Inter var', ...fontFamily.sans],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  variants: {},
+  variants: {
+    boxShadow: ({ after }) => after(['focus-visible']),
+  },
   plugins: [require('@tailwindcss/ui')],
-  corePlugins: {},
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
 };
